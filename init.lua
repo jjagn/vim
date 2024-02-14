@@ -27,8 +27,6 @@ end
 
 -- init.lua
 
--- Load custom treesitter grammar for org filetype
-require('orgmode').setup_ts_grammar()
 
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup {
@@ -38,9 +36,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
     -- Required for spellcheck, some LaTex highlights and
     -- code block highlights that do not have ts grammar
-    additional_vim_regex_highlighting = {'org'},
   },
-  ensure_installed = {'org'}, -- Or run :TSUpdate org
 }
 
 --require('orgmode').setup({
